@@ -2,9 +2,9 @@
 Exam 3, problem 2.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  October 2018.
+         their colleagues and Timothy Li.  October 2018.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -93,6 +93,17 @@ def problem2(sequence):
     # TODO: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+
+    pos = 0
+    max = sequence[0]
+    for i in range(1,len(sequence)):
+        num = sequence[i]
+        if sequence[i] < 0:
+            num = (-1)*sequence[i]
+        if num > max:
+            pos = i
+            max = num
+    return pos
 
 
 ###############################################################################
